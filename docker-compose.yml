@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+  node-red:
+    image: nodered/node-red:latest
+    environment:
+      - TZ=Europe/Berlin
+    ports:
+      - "1880:1880"
+    networks:
+      - fae_backend
+    volumes:
+      - node-red-data
+
+volumes:
+  node-red-data:
+
+networks:
+  fae_backend:
+    external: true
