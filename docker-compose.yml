@@ -13,7 +13,7 @@ services:
       - node-red-data:/data
 
 volumes:
-  node-red-data:
+  node-red-data: {}
 
 networks:
   fae_backend:
